@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name" translatable="false">PS Trophies</string>
+
+    <string name="home">Home</string>
+    <string name="store">Store</string>
+    <string name="chat">Chat</string>
+    <string name="news">News</string>
+    <string name="others">Others</string>
+    <string name="my_profile">My Profile</string>
+    <string name="ps_plus">PS Plus</string>
+    <string name="games">Games</string>
+    <string name="trophies">Trophies</string>
+    <string name="support">Support</string>
+    <string name="guides">Guides</string>
+</resources>

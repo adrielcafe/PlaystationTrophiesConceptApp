@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_gray"
+    tools:context=".view.main.sections.OthersSectionFragment">
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionMyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vOptionGames"
+        app:layout_constraintEnd_toStartOf="@+id/vOptionPsPlus"
+        app:layout_constraintStart_toStartOf="@+id/vGuidelineVerticalEnd"
+        app:layout_constraintTop_toTopOf="@+id/vGuidelineHorizontalTop"
+        app:oov_title="@string/my_profile"
+        app:oov_icon="@drawable/profile_picture"
+        app:oov_tint_icon="false"
+        app:oov_round_icon="true"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionPsPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vOptionTrophies"
+        app:layout_constraintEnd_toStartOf="@+id/vGuidelineVerticalStart"
+        app:layout_constraintStart_toEndOf="@+id/vOptionMyProfile"
+        app:layout_constraintTop_toTopOf="@+id/vGuidelineHorizontalTop"
+        app:oov_title="@string/ps_plus"
+        app:oov_icon="@drawable/ic_ps_plus"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionTrophies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vOptionGuides"
+        app:layout_constraintEnd_toStartOf="@+id/vGuidelineVerticalStart"
+        app:layout_constraintStart_toEndOf="@+id/vOptionGames"
+        app:layout_constraintTop_toBottomOf="@+id/vOptionPsPlus"
+        app:oov_title="@string/trophies"
+        app:oov_icon="@drawable/ic_trophy"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vOptionSupport"
+        app:layout_constraintEnd_toStartOf="@+id/vOptionTrophies"
+        app:layout_constraintStart_toStartOf="@+id/vGuidelineVerticalEnd"
+        app:layout_constraintTop_toBottomOf="@+id/vOptionMyProfile"
+        app:oov_title="@string/games"
+        app:oov_icon="@drawable/ic_gamepad"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vGuidelineHorizontalBottom"
+        app:layout_constraintEnd_toStartOf="@+id/vOptionGuides"
+        app:layout_constraintStart_toStartOf="@+id/vGuidelineVerticalEnd"
+        app:layout_constraintTop_toBottomOf="@+id/vOptionGames"
+        app:oov_title="@string/support"
+        app:oov_icon="@drawable/ic_support"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.OtherOptionView
+        android:id="@+id/vOptionGuides"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vGuidelineHorizontalBottom"
+        app:layout_constraintEnd_toStartOf="@+id/vGuidelineVerticalStart"
+        app:layout_constraintStart_toEndOf="@+id/vOptionSupport"
+        app:layout_constraintTop_toBottomOf="@+id/vOptionTrophies"
+        app:oov_title="@string/guides"
+        app:oov_icon="@drawable/ic_text"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineHorizontalTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineHorizontalBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"/>
+
+    <FrameLayout
+        android:id="@+id/vContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="?android:actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

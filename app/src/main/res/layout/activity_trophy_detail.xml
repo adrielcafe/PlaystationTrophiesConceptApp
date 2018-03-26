@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.trophy.detail.TrophyDetailActivity">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/vBlurredGameCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/cover_game_4"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_transparent_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/vClose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="?android:selectableItemBackground"
+        android:padding="10dp"
+        android:tint="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/vGameCoverCard"
+        android:layout_width="210dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vClose">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/vGameCover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:transitionName="gameCover"
+            tools:srcCompat="@drawable/cover_game_4"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vGameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vGameCoverCard"
+        tools:text="Uncharted 4: A Thief's End"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.TrophyCountView
+        android:id="@+id/vBronzeTrophies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/vGuidelineBronzeTrophy"
+        app:layout_constraintTop_toBottomOf="@+id/vGameTitle"
+        app:tcv_type="bronze"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.TrophyCountView
+        android:id="@+id/vSilverTrophies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@+id/vGuidelineSilverTrophy"
+        app:layout_constraintTop_toBottomOf="@+id/vGameTitle"
+        app:tcv_type="silver"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.TrophyCountView
+        android:id="@+id/vGoldTrophies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@+id/vGuidelineGoldTrophy"
+        app:layout_constraintTop_toBottomOf="@+id/vGameTitle"
+        app:tcv_type="gold"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.TrophyCountView
+        android:id="@+id/vPlatinumTrophies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/vGuidelinePlatinumTrophy"
+        app:layout_constraintTop_toBottomOf="@+id/vGameTitle"
+        app:tcv_type="platinum"/>
+
+    <cafe.adriel.playstationtrophies.view.custom.AnimatedProgressBar
+        android:id="@+id/vTrophiesProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:progressTint="@android:color/white"
+        android:progressBackgroundTint="@color/black_transparent_1"
+        app:layout_constraintEnd_toStartOf="@+id/vGuidelineProgressEnd"
+        app:layout_constraintStart_toStartOf="@+id/vGuidelineProgressStart"
+        app:layout_constraintTop_toBottomOf="@+id/vBronzeTrophies"
+        tools:progress="50"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/vTotalTrophiesIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="@+id/vGuidelineProgressStart"
+        app:layout_constraintTop_toBottomOf="@+id/vTrophiesProgress"
+        app:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_trophy_star"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vTotalTrophiesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/vTotalTrophiesIcon"
+        app:layout_constraintStart_toEndOf="@+id/vTotalTrophiesIcon"
+        app:layout_constraintTop_toTopOf="@+id/vTotalTrophiesIcon"
+        tools:text="123/456"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/vTotalTrophiesPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/vTotalTrophiesIcon"
+        app:layout_constraintEnd_toStartOf="@+id/vGuidelineProgressEnd"
+        app:layout_constraintTop_toTopOf="@+id/vTotalTrophiesIcon"
+        tools:text="50%"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineBronzeTrophy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineSilverTrophy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineGoldTrophy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.53"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelinePlatinumTrophy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineProgressEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90"/>
+
+</android.support.constraint.ConstraintLayout>

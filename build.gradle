@@ -1,0 +1,29 @@
+buildscript {
+    ext.support_version = '27.1.0'
+    ext.kotlin_version = '1.2.30'
+    ext.retrofit_version = '2.3.0'
+    ext.moxy_version = '1.5.3'
+    ext.glide_version = '4.6.1'
+    ext.fastadapter_version = '3.2.4'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0-rc03'
+        classpath "io.mironov.smuggler:smuggler-plugin:0.13.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

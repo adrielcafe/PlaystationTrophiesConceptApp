@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="OtherOptionView">
+        <attr name="oov_title" format="string" />
+        <attr name="oov_icon" format="reference" />
+        <attr name="oov_tint_icon" format="boolean" />
+        <attr name="oov_round_icon" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TrophyCountView">
+        <attr name="tcv_type" format="enum">
+            <enum name="bronze" value="0"/>
+            <enum name="silver" value="1"/>
+            <enum name="gold" value="2"/>
+            <enum name="platinum" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AnimatedTextView">
+        <attr name="atv_suffix" format="string" />
+    </declare-styleable>
+
+</resources>

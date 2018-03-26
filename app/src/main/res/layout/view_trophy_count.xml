@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/vTrophyIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:scaleType="centerInside"
+            app:tint="@android:color/white"
+            app:srcCompat="@drawable/ic_trophy_star"/>
+
+        <cafe.adriel.playstationtrophies.view.custom.AnimatedTextView
+            android:id="@+id/vTrophyCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white"
+            tools:text="99"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</merge>
