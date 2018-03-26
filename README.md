@@ -6,4 +6,4 @@ Concept app based on [Filip Slováček](https://dribbble.com/filipslovacek)'s [o
 **[Sample app](sample-app.apk)**
 
 ## Demo
-![gif demo](demo.gif)
+<img src="demo.gif" width="400" height="auto" />
